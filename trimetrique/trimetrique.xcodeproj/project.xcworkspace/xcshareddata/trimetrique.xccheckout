@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F3530FDD-B03F-4768-B7AA-16F3C668BEEA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>trimetrique</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>033886AE-5CCC-4C8D-AADE-4655D1F56DE3</key>
+		<string>https://github.com/aliceffekt/trimetriquencil.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>trimetrique/trimetrique.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>033886AE-5CCC-4C8D-AADE-4655D1F56DE3</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/aliceffekt/trimetriquencil.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>033886AE-5CCC-4C8D-AADE-4655D1F56DE3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>033886AE-5CCC-4C8D-AADE-4655D1F56DE3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>trimetriquencil</string>
+		</dict>
+	</array>
+</dict>
+</plist>
