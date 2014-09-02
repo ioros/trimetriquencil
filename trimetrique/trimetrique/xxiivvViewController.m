@@ -25,8 +25,7 @@
 	letterWidth = 0.5;
 	
 	[self templateStart];
-//	[self animationTest];
-	[self renderText:@"- leave something witchy"];
+//	[self renderText:@"- leave something witchy"];
 }
 
 -(void)templateStart
@@ -640,20 +639,39 @@
 	
 }
 
-
-
-
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-
 - (BOOL)prefersStatusBarHidden
 {
     return YES;
 }
+
+- (IBAction)textInputCHanged:(id)sender {
+	
+	NSLog(@"!!");
+	
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+	NSLog(@"Text field did begin editing");
+}
+
+// This method is called once we complete editing
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+	NSLog(@"Text field ended editing");
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+	
+	NSLog(@"%@",[textField text]);
+	
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 @end

@@ -36,6 +36,18 @@
                             <view appearanceType="aqua" contentMode="scaleToFill" id="6D8-dq-npH" userLabel="interfaceWrapper">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="0Uu-mG-vF4">
+                                        <rect key="frame" x="112" y="30" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textInputCHanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="G8U-8j-QZY"/>
+                                            <outlet property="delegate" destination="vXZ-lx-hvc" id="BAd-cL-TQk"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,6 +58,7 @@
                         <outlet property="brushVertex3" destination="S5o-3c-CX2" id="svC-Xz-611"/>
                         <outlet property="brushWrapper" destination="fPJ-L8-cwi" id="R1V-qx-r3F"/>
                         <outlet property="interfaceWrapper" destination="6D8-dq-npH" id="Jt8-V0-gp2"/>
+                        <outlet property="textInput" destination="0Uu-mG-vF4" id="256-Hg-T5Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

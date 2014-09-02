@@ -8,19 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface xxiivvViewController : UIViewController
+@interface xxiivvViewController : UIViewController<UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *brushWrapper;
 
 @property (strong, nonatomic) IBOutlet UIView *brushVertex1;
 @property (strong, nonatomic) IBOutlet UIView *brushVertex2;
 @property (strong, nonatomic) IBOutlet UIView *brushVertex3;
-@property (strong, nonatomic) IBOutlet UIView *brushVertex4;
-@property (strong, nonatomic) IBOutlet UIView *brushVertex5;
+@property (strong, nonatomic) IBOutlet UITextField *textInput;
 
 
 @property (strong, nonatomic) IBOutlet UIView *interfaceWrapper;
 
+- (IBAction)textInputCHanged:(id)sender;
 
 
 @end
