@@ -37,17 +37,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wmp-nM-rmW" userLabel="toggleInterface">
-                                        <rect key="frame" x="0.0" y="152" width="320" height="291"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="toggleInterface:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JPT-NU-N5r"/>
-                                        </connections>
-                                    </button>
                                     <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BcN-O2-HA8" userLabel="toggleLineWidth">
                                         <rect key="frame" x="0.0" y="139" width="320" height="291"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -59,7 +48,7 @@
                                             <action selector="toggleLineWidth:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bEm-S8-1J9"/>
                                         </connections>
                                     </button>
-                                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bph-hU-0Pd" userLabel="toggleStrobe">
+                                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bph-hU-0Pd" userLabel="toggleLineStyle">
                                         <rect key="frame" x="0.0" y="139" width="320" height="291"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -67,10 +56,35 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="toggleStrobe:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8af-qo-SEx"/>
+                                            <action selector="toggleLineStyle:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VIR-xa-nai"/>
                                         </connections>
                                     </button>
-                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Input Text" minimumFontSize="12" id="0Uu-mG-vF4" userLabel="textInput">
+                                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Psp-Pr-0VH" userLabel="toggleLineSpeed">
+                                        <rect key="frame" x="0.0" y="139" width="320" height="291"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleLineSpeed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ynq-bJ-4bf"/>
+                                            <action selector="toggleLineStyle:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JCv-Yp-iJW"/>
+                                        </connections>
+                                    </button>
+                                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O5i-da-90M" userLabel="toggleLineColor">
+                                        <rect key="frame" x="0.0" y="139" width="320" height="291"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleLineColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aDk-B7-1JQ"/>
+                                            <action selector="toggleLineSpeed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HPL-Mm-rWj"/>
+                                            <action selector="toggleLineStyle:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Nxh-SN-Nvw"/>
+                                        </connections>
+                                    </button>
+                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text" minimumFontSize="12" id="0Uu-mG-vF4" userLabel="textInput">
                                         <rect key="frame" x="112" y="30" width="97" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,6 +96,17 @@
                                     </textField>
                                 </subviews>
                             </view>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wmp-nM-rmW" userLabel="toggleInterface">
+                                <rect key="frame" x="0.0" y="139" width="320" height="291"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleInterface:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JPT-NU-N5r"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -93,8 +118,10 @@
                         <outlet property="interfaceWrapper" destination="6D8-dq-npH" id="Jt8-V0-gp2"/>
                         <outlet property="textInput" destination="0Uu-mG-vF4" id="256-Hg-T5Y"/>
                         <outlet property="toggleInterface" destination="wmp-nM-rmW" id="SH4-qh-zB5"/>
+                        <outlet property="toggleLineColor" destination="O5i-da-90M" id="JEt-ip-DaA"/>
+                        <outlet property="toggleLineSpeed" destination="Psp-Pr-0VH" id="YLO-jq-Shd"/>
+                        <outlet property="toggleLineStyle" destination="Bph-hU-0Pd" id="dKn-Bd-Jtc"/>
                         <outlet property="toggleLineWidth" destination="BcN-O2-HA8" id="yt2-Ma-N2Y"/>
-                        <outlet property="toggleStrobe" destination="Bph-hU-0Pd" id="6n8-fx-1KV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

@@ -45,12 +45,17 @@
 	_toggleLineWidth.backgroundColor = [UIColor redColor];
 	_toggleLineWidth.frame = CGRectMake(0, 0, tileSize, tileSize);
 	
-	_toggleStrobe.backgroundColor = [UIColor whiteColor];
-	_toggleStrobe.frame = CGRectMake(tileSize*4, 0, tileSize, tileSize);
+	_toggleLineStyle.backgroundColor = [UIColor whiteColor];
+	_toggleLineStyle.frame = CGRectMake(tileSize*4, 0, tileSize, tileSize);
+	
+	_toggleLineSpeed.backgroundColor = [UIColor blueColor];
+	_toggleLineSpeed.frame = CGRectMake(tileSize*5, 0, tileSize, tileSize);
+	
+	_toggleLineColor.backgroundColor = [UIColor yellowColor];
+	_toggleLineColor.frame = CGRectMake(tileSize*6, 0, tileSize, tileSize);
 	
 	_textInput.frame = CGRectMake(tileSize+(tileSize/2), 0, (tileSize*2), tileSize);
 	[_textInput setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
-	
 }
 
 -(void)renderText :(NSString*)text
@@ -684,15 +689,26 @@
 }
 
 
-- (IBAction)toggleInterface:(id)sender {
-	
-	NSLog(@"!");
-	
+- (IBAction)toggleInterface:(id)sender
+{	
+	if( _interfaceWrapper.hidden == YES ){
+		_interfaceWrapper.hidden = NO;
+	}
+	else{
+		_interfaceWrapper.hidden = YES;
+	}
 }
 
 - (IBAction)toggleLineWidth:(id)sender {
 }
 
-- (IBAction)toggleStrobe:(id)sender {
+- (IBAction)toggleLineStyle:(id)sender {
 }
+
+- (IBAction)toggleLineSpeed:(id)sender {
+}
+
+- (IBAction)toggleLineColor:(id)sender {
+}
+
 @end

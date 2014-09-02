@@ -20,11 +20,15 @@
 @property (strong, nonatomic) IBOutlet UITextField *textInput;
 @property (strong, nonatomic) IBOutlet UIButton *toggleInterface;
 @property (strong, nonatomic) IBOutlet UIButton *toggleLineWidth;
-@property (strong, nonatomic) IBOutlet UIButton *toggleStrobe;
+@property (strong, nonatomic) IBOutlet UIButton *toggleLineStyle;
+@property (strong, nonatomic) IBOutlet UIButton *toggleLineSpeed;
+@property (strong, nonatomic) IBOutlet UIButton *toggleLineColor;
 
 - (IBAction)toggleInterface:(id)sender;
 - (IBAction)toggleLineWidth:(id)sender;
-- (IBAction)toggleStrobe:(id)sender;
+- (IBAction)toggleLineStyle:(id)sender;
+- (IBAction)toggleLineSpeed:(id)sender;
+- (IBAction)toggleLineColor:(id)sender;
 
 @end
 
