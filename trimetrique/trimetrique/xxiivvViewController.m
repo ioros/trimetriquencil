@@ -22,7 +22,6 @@
 
 -(void)start
 {
-	
 	tileSize = self.view.frame.size.width/8;
 	screenWidth = self.view.frame.size.width;
 	screenHeight = self.view.frame.size.height;
@@ -30,9 +29,10 @@
 	letterSpeed = 0.5;
 	letterWidth = tileSize/2;
 	letterRounded = 1;
-	letterColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
+	letterColor = 0;
 	
 	[self templateStart];
+	[self renderText:@""];
 }
 
 -(void)templateStart
@@ -53,17 +53,13 @@
 	
 	_toggleInterface.frame = CGRectMake(0, tileSize, screenWidth, screenHeight-tileSize);
 	
-	_toggleLineWidth.backgroundColor = [UIColor redColor];
-	_toggleLineWidth.frame = CGRectMake(0, 0, tileSize, tileSize);
+	_toggleLineSpeed.frame = CGRectMake(tileSize*0, 0, tileSize, tileSize);
 	
-	_toggleLineStyle.backgroundColor = [UIColor whiteColor];
-	_toggleLineStyle.frame = CGRectMake(tileSize*4, 0, tileSize, tileSize);
+	_toggleLineStyle.frame = CGRectMake(tileSize*5, 0, tileSize, tileSize);
 	
-	_toggleLineSpeed.backgroundColor = [UIColor blueColor];
-	_toggleLineSpeed.frame = CGRectMake(tileSize*5, 0, tileSize, tileSize);
+	_toggleLineWidth.frame = CGRectMake(tileSize*6, 0, tileSize, tileSize);
 	
-	_toggleLineColor.backgroundColor = [UIColor yellowColor];
-	_toggleLineColor.frame = CGRectMake(tileSize*6, 0, tileSize, tileSize);
+	_toggleLineColor.frame = CGRectMake(tileSize*7, 0, tileSize, tileSize);
 	
 	_guideWidthLeft.frame = CGRectMake( (screenWidth/2)+(letterWidth/2), 0, 1, screenHeight);
 	_guideWidthRight.frame = CGRectMake( (screenWidth/2)-(letterWidth/2)-1, 0, 1, screenHeight);
@@ -73,6 +69,40 @@
 	
 	_textInput.frame = CGRectMake(tileSize+(tileSize/2), 0, (tileSize*2), tileSize);
 	[_textInput setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
+	
+	// Preview
+	
+	UIColor * colorTarget = [UIColor whiteColor];
+	if( letterColor == 2 ){ colorTarget = [UIColor colorWithRed:0 green:1 blue:0.75 alpha:1]; }
+	if( letterColor == 1 ){ colorTarget = [UIColor colorWithRed:1 green:0 blue:0 alpha:1]; }
+	if( letterColor == 0 ){ colorTarget = [UIColor redColor]; }
+	
+	_previewLineColor.backgroundColor = colorTarget;
+	_previewLineColor.frame = CGRectMake(screenWidth-tileSize/4*3, tileSize/2/2, tileSize/2, tileSize/2);
+	
+	_previewLineStyle.backgroundColor = [UIColor grayColor];
+	_previewLineStyle.frame = CGRectMake(screenWidth-(tileSize/4*3)-(tileSize*2), tileSize/2/2, tileSize/2, tileSize/2);
+	
+	if(letterRounded == 1){
+		_previewLineStyle.layer.cornerRadius = tileSize/2/2;
+	}
+	else{
+		_previewLineStyle.layer.cornerRadius = 0;
+	}
+	
+	
+	_previewLineWidth.backgroundColor = [UIColor grayColor];
+	
+	if(letterWidth == tileSize/2){
+		_previewLineWidth.frame = CGRectMake(screenWidth-(tileSize/4*3)-(tileSize*1), tileSize/2/2, tileSize/2, tileSize/2);
+	}
+	else{
+		_previewLineWidth.frame = CGRectMake(screenWidth-(tileSize/4*3)-(tileSize*1), tileSize/2/2, tileSize/2/2, tileSize/2);
+	}
+	
+	
+	
+	
 }
 
 -(void)renderText :(NSString*)text
@@ -117,10 +147,15 @@
 		currentSegment = 1;
 		currentIndex += 1;
 	}
+		
+	UIColor * colorTarget = [UIColor whiteColor];
+	if( letterColor == 2 ){ colorTarget = [UIColor colorWithRed:0 green:1 blue:0.75 alpha:1]; }
+	if( letterColor == 1 ){ colorTarget = [UIColor colorWithRed:1 green:0 blue:0 alpha:1]; }
+	if( letterColor == 0 ){ colorTarget = [UIColor redColor]; }
 	
-	_brushVertex1.backgroundColor = letterColor;
-	_brushVertex2.backgroundColor = letterColor;
-	_brushVertex3.backgroundColor = letterColor;
+	_brushVertex1.backgroundColor = colorTarget;
+	_brushVertex2.backgroundColor = colorTarget;
+	_brushVertex3.backgroundColor = colorTarget;
 	
 	_brushVertex1.frame = [self renderLetterShape:letter:currentSegment:1];
 	_brushVertex2.frame = [self renderLetterShape:letter:currentSegment:2];
@@ -746,18 +781,12 @@
 
 - (IBAction)toggleLineColor:(id)sender
 {
-	if( letterColor == [UIColor colorWithRed:1 green:0 blue:0 alpha:1] ){
-		NSLog(@"LINE | White");
-		letterColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
+	
+	if( letterColor > 2 ){
+		letterColor = 0;
 	}
-	else if( letterColor == [UIColor colorWithRed:1 green:1 blue:1 alpha:1] ){
-		NSLog(@"LINE | Cyan");
-		letterColor = [UIColor colorWithRed:0 green:1 blue:1 alpha:1];
-	}
-	else{
-		NSLog(@"LINE | Red");
-		letterColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:1];
-	}
+	letterColor += 1;
+	[self templateStart];
 }
 
 @end

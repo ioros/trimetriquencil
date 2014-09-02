@@ -47,22 +47,32 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.40999651008595783" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
+                                    <view appearanceType="aqua" contentMode="scaleToFill" id="OAI-sp-P1H" userLabel="previewLineWidth">
+                                        <rect key="frame" x="80" y="142" width="160" height="284"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
                                     <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BcN-O2-HA8" userLabel="toggleLineWidth">
                                         <rect key="frame" x="0.0" y="139" width="320" height="291"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="Wid">
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="toggleLineWidth:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bEm-S8-1J9"/>
                                         </connections>
                                     </button>
+                                    <view appearanceType="aqua" contentMode="scaleToFill" id="47m-hL-eQK" userLabel="previewLineStyle">
+                                        <rect key="frame" x="80" y="142" width="160" height="284"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
                                     <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bph-hU-0Pd" userLabel="toggleLineStyle">
                                         <rect key="frame" x="0.0" y="139" width="320" height="291"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="Sty">
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -80,11 +90,16 @@
                                             <action selector="toggleLineSpeed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ynq-bJ-4bf"/>
                                         </connections>
                                     </button>
+                                    <view appearanceType="aqua" contentMode="scaleToFill" id="IHc-p8-hev" userLabel="previewLineColor">
+                                        <rect key="frame" x="80" y="142" width="160" height="284"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
                                     <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O5i-da-90M" userLabel="toggleLineColor">
                                         <rect key="frame" x="0.0" y="139" width="320" height="291"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="Clr">
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -125,6 +140,9 @@
                         <outlet property="guideWidthLeft" destination="HE5-rx-Wgh" id="Mj2-2S-8ZA"/>
                         <outlet property="guideWidthRight" destination="OJg-fa-nKa" id="SUg-zn-Fc8"/>
                         <outlet property="interfaceWrapper" destination="6D8-dq-npH" id="Jt8-V0-gp2"/>
+                        <outlet property="previewLineColor" destination="IHc-p8-hev" id="88Q-tr-puU"/>
+                        <outlet property="previewLineStyle" destination="47m-hL-eQK" id="ppU-Oy-jfs"/>
+                        <outlet property="previewLineWidth" destination="OAI-sp-P1H" id="6Lo-K4-QGi"/>
                         <outlet property="textInput" destination="0Uu-mG-vF4" id="256-Hg-T5Y"/>
                         <outlet property="toggleInterface" destination="wmp-nM-rmW" id="SH4-qh-zB5"/>
                         <outlet property="toggleLineColor" destination="O5i-da-90M" id="JEt-ip-DaA"/>

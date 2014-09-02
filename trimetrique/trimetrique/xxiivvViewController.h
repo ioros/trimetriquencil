@@ -27,6 +27,10 @@
 @property (strong, nonatomic) IBOutlet UIView *guideWidthLeft;
 @property (strong, nonatomic) IBOutlet UIView *guideWidthRight;
 
+@property (strong, nonatomic) IBOutlet UIView *previewLineColor;
+@property (strong, nonatomic) IBOutlet UIView *previewLineStyle;
+@property (strong, nonatomic) IBOutlet UIView *previewLineWidth;
+
 - (IBAction)toggleInterface:(id)sender;
 - (IBAction)toggleLineWidth:(id)sender;
 - (IBAction)toggleLineStyle:(id)sender;
@@ -42,7 +46,7 @@ float screenHeight;
 float letterSpeed;
 float letterWidth;
 float letterRounded;
-UIColor *letterColor;
+float letterColor;
 
 int currentIndex;
 int currentSegment;
