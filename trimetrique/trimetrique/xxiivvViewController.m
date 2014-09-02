@@ -30,7 +30,7 @@
 
 -(void)templateStart
 {
-	tileSize = self.view.frame.size.width/32;
+	tileSize = self.view.frame.size.width/8;
 	screenWidth = self.view.frame.size.width;
 	screenHeight = self.view.frame.size.height;
 	
@@ -39,11 +39,26 @@
 	_brushVertex1.layer.cornerRadius = tileSize/2;
 	_brushVertex2.layer.cornerRadius = tileSize/2;
 	_brushVertex3.layer.cornerRadius = tileSize/2;
+	
+	_toggleInterface.frame = CGRectMake(0, tileSize, screenWidth, screenHeight-tileSize);
+	
+	_toggleLineWidth.backgroundColor = [UIColor redColor];
+	_toggleLineWidth.frame = CGRectMake(0, 0, tileSize, tileSize);
+	
+	_toggleStrobe.backgroundColor = [UIColor whiteColor];
+	_toggleStrobe.frame = CGRectMake(tileSize*4, 0, tileSize, tileSize);
+	
+	_textInput.frame = CGRectMake(tileSize+(tileSize/2), 0, (tileSize*2), tileSize);
+	[_textInput setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
+	
 }
 
 -(void)renderText :(NSString*)text
 {
-	NSTimer *t = [NSTimer scheduledTimerWithTimeInterval: letterWidth target: self selector:@selector(renderTextTrigger:) userInfo: text repeats:YES];
+	[textPrint invalidate];
+	if(![text isEqualToString:@""] ){
+		textPrint = [NSTimer scheduledTimerWithTimeInterval: letterWidth target: self selector:@selector(renderTextTrigger:) userInfo: text repeats:YES];
+	}
 }
 
 -(void)renderTextTrigger :(NSTimer *)timer
@@ -650,28 +665,34 @@
     return YES;
 }
 
-- (IBAction)textInputCHanged:(id)sender {
-	
-	NSLog(@"!!");
-	
-}
-
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
 	NSLog(@"Text field did begin editing");
 }
 
 // This method is called once we complete editing
--(void)textFieldDidEndEditing:(UITextField *)textField{
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
 	NSLog(@"Text field ended editing");
 }
 
--(BOOL) textFieldShouldReturn:(UITextField *)textField{
-	
-	NSLog(@"%@",[textField text]);
+-(BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+	[self renderText:[textField text]];
 	
     [textField resignFirstResponder];
     return YES;
 }
 
 
+- (IBAction)toggleInterface:(id)sender {
+	
+	NSLog(@"!");
+	
+}
+
+- (IBAction)toggleLineWidth:(id)sender {
+}
+
+- (IBAction)toggleStrobe:(id)sender {
+}
 @end

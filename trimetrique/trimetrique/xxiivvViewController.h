@@ -15,13 +15,16 @@
 @property (strong, nonatomic) IBOutlet UIView *brushVertex1;
 @property (strong, nonatomic) IBOutlet UIView *brushVertex2;
 @property (strong, nonatomic) IBOutlet UIView *brushVertex3;
-@property (strong, nonatomic) IBOutlet UITextField *textInput;
-
 
 @property (strong, nonatomic) IBOutlet UIView *interfaceWrapper;
+@property (strong, nonatomic) IBOutlet UITextField *textInput;
+@property (strong, nonatomic) IBOutlet UIButton *toggleInterface;
+@property (strong, nonatomic) IBOutlet UIButton *toggleLineWidth;
+@property (strong, nonatomic) IBOutlet UIButton *toggleStrobe;
 
-- (IBAction)textInputCHanged:(id)sender;
-
+- (IBAction)toggleInterface:(id)sender;
+- (IBAction)toggleLineWidth:(id)sender;
+- (IBAction)toggleStrobe:(id)sender;
 
 @end
 
@@ -34,3 +37,5 @@ float letterWidth;
 
 int currentIndex;
 int currentSegment;
+
+NSTimer *textPrint;
