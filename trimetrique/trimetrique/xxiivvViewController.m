@@ -30,6 +30,7 @@
 	letterSpeed = 0.5;
 	letterWidth = tileSize/2;
 	letterRounded = 1;
+	letterColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
 	
 	[self templateStart];
 }
@@ -101,7 +102,6 @@
 
 -(void)letterSpace
 {
-	NSLog(@"Letter: ");
 	_brushVertex1.frame = CGRectMake(0, 0, 0, 0);
 	_brushVertex2.frame = CGRectMake(0, 0, 0, 0);
 	_brushVertex3.frame = CGRectMake(0, 0, 0, 0);
@@ -118,16 +118,9 @@
 		currentIndex += 1;
 	}
 	
-	if( [letter isEqualToString:@"-"] ){
-		_brushVertex1.backgroundColor = [UIColor redColor];
-		_brushVertex2.backgroundColor = [UIColor redColor];
-		_brushVertex3.backgroundColor = [UIColor redColor];
-	}
-	else{
-		_brushVertex1.backgroundColor = [UIColor whiteColor];
-		_brushVertex2.backgroundColor = [UIColor whiteColor];
-		_brushVertex3.backgroundColor = [UIColor whiteColor];
-	}
+	_brushVertex1.backgroundColor = letterColor;
+	_brushVertex2.backgroundColor = letterColor;
+	_brushVertex3.backgroundColor = letterColor;
 	
 	_brushVertex1.frame = [self renderLetterShape:letter:currentSegment:1];
 	_brushVertex2.frame = [self renderLetterShape:letter:currentSegment:2];
@@ -712,7 +705,17 @@
 	}
 }
 
-- (IBAction)toggleLineWidth:(id)sender {
+- (IBAction)toggleLineWidth:(id)sender
+{
+	if( letterWidth == tileSize/2 ){
+		NSLog(@"LINE | Thin");
+		letterWidth = tileSize/4;
+	}
+	else{
+		NSLog(@"LINE | Thick");
+		letterWidth = tileSize/2;
+	}
+	[self templateStart];
 }
 
 - (IBAction)toggleLineStyle:(id)sender
@@ -728,10 +731,33 @@
 	[self templateStart];
 }
 
-- (IBAction)toggleLineSpeed:(id)sender {
+- (IBAction)toggleLineSpeed:(id)sender
+{
+	if( letterSpeed == 1 ){
+		NSLog(@"LINE | Fast");
+		letterSpeed = 0.5;
+	}
+	else{
+		NSLog(@"LINE | Slow");
+		letterSpeed = 1;
+	}
+	[self templateStart];
 }
 
-- (IBAction)toggleLineColor:(id)sender {
+- (IBAction)toggleLineColor:(id)sender
+{
+	if( letterColor == [UIColor colorWithRed:1 green:0 blue:0 alpha:1] ){
+		NSLog(@"LINE | White");
+		letterColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
+	}
+	else if( letterColor == [UIColor colorWithRed:1 green:1 blue:1 alpha:1] ){
+		NSLog(@"LINE | Cyan");
+		letterColor = [UIColor colorWithRed:0 green:1 blue:1 alpha:1];
+	}
+	else{
+		NSLog(@"LINE | Red");
+		letterColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:1];
+	}
 }
 
 @end

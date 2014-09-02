@@ -42,6 +42,7 @@ float screenHeight;
 float letterSpeed;
 float letterWidth;
 float letterRounded;
+UIColor *letterColor;
 
 int currentIndex;
 int currentSegment;
