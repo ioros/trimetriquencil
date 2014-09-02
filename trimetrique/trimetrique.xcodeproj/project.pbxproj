@@ -457,6 +457,7 @@
 				037B185119B4C57200949BA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		037B185219B4C57200949BA5 /* Build configuration list for PBXNativeTarget "trimetriqueTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +466,7 @@
 				037B185419B4C57200949BA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

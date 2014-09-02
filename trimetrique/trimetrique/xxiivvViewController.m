@@ -22,11 +22,11 @@
 
 -(void)start
 {
-	letterWidth = 1.0;
+	letterWidth = 0.5;
 	
 	[self templateStart];
 //	[self animationTest];
-	[self renderText:@"kil"];
+	[self renderText:@"- leave something witchy"];
 }
 
 -(void)templateStart
@@ -84,6 +84,17 @@
 	}
 	
 	NSLog(@"Letter: %@ segment: %d", letter, currentSegment);
+	
+	if( [letter isEqualToString:@"-"] ){
+		_brushVertex1.backgroundColor = [UIColor redColor];
+		_brushVertex2.backgroundColor = [UIColor redColor];
+		_brushVertex3.backgroundColor = [UIColor redColor];
+	}
+	else{
+		_brushVertex1.backgroundColor = [UIColor whiteColor];
+		_brushVertex2.backgroundColor = [UIColor whiteColor];
+		_brushVertex3.backgroundColor = [UIColor whiteColor];
+	}
 	
 	_brushVertex1.frame = [self renderLetterShape:letter:currentSegment:1];
 	_brushVertex2.frame = [self renderLetterShape:letter:currentSegment:2];
@@ -201,13 +212,13 @@
 	if([letter isEqualToString:@"f"]){
 		if(segment == 1){
 			if(vertex == 1){ return pos1; }
-			if(vertex == 2){ return barFull; }
-			if(vertex == 3){ return pos3; }
+			if(vertex == 2){ return pos2; }
+			if(vertex == 3){ return barFull; }
 		}
 		else if(segment == 2 || segment == 3 || segment == 4){
 			if(vertex == 1){ return pos1; }
 			if(vertex == 2){ return pos2; }
-			if(vertex == 3){ return pos3; }
+			if(vertex == 3){ return barNull; }
 		}
 		else if(segment == 5){
 			if(vertex == 1){ return pos1; }
@@ -334,7 +345,7 @@
 			if(vertex == 3){ return barNull; }
 		}
 		else if(segment == 3){
-			if(vertex == 1){ return barTop2; }
+			if(vertex == 1){ return barTop; }
 			if(vertex == 2){ return barNull; }
 			if(vertex == 3){ return barNull; }
 		}
@@ -349,7 +360,279 @@
 			if(vertex == 3){ return barNull; }
 		}
 	}
-		
+	if([letter isEqualToString:@"n"]){
+		if(segment == 1){
+			if(vertex == 1){ return barFull; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 2 || segment == 3 || segment == 4){
+			if(vertex == 1){ return pos1; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 5){
+			if(vertex == 1){ return barFull; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+	}
+	if([letter isEqualToString:@"o"]){
+		if(segment == 1){
+			if(vertex == 1){ return barFull; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 2 || segment == 3 || segment == 4){
+			if(vertex == 1){ return pos1; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return pos3; }
+		}
+		else if(segment == 5){
+			if(vertex == 1){ return barFull; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+	}
+	if([letter isEqualToString:@"p"]){
+		if(segment == 1){
+			if(vertex == 1){ return barFull; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 2 || segment == 3 || segment == 4){
+			if(vertex == 1){ return pos1; }
+			if(vertex == 2){ return pos2; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 5){
+			if(vertex == 1){ return barTop1; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+	}
+	if([letter isEqualToString:@"q"]){
+		if(segment == 1){
+			if(vertex == 1){ return barFull; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 2){
+			if(vertex == 1){ return pos1; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return pos3; }
+		}
+		else if(segment == 3){
+			if(vertex == 1){ return pos1; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barBottom2; }
+		}
+		else if(segment == 4){
+			if(vertex == 1){ return pos1; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return pos3; }
+		}
+		else if(segment == 5){
+			if(vertex == 1){ return barFull; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+	}
+	if([letter isEqualToString:@"r"]){
+		if(segment == 1){
+			if(vertex == 1){ return barFull; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 2){
+			if(vertex == 1){ return pos1; }
+			if(vertex == 2){ return pos2; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 3){
+			if(vertex == 1){ return pos1; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barBottom1; }
+		}
+		else if(segment == 4){
+			if(vertex == 1){ return pos1; }
+			if(vertex == 2){ return pos2; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 5){
+			if(vertex == 1){ return barTop; }
+			if(vertex == 2){ return pos2; }
+			if(vertex == 3){ return barBottom2; }
+		}
+	}
+	if([letter isEqualToString:@"s"]){
+		if(segment == 1){
+			if(vertex == 1){ return barTop; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 2 || segment == 3 || segment == 4){
+			if(vertex == 1){ return pos1; }
+			if(vertex == 2){ return pos2; }
+			if(vertex == 3){ return pos3; }
+		}
+		else if(segment == 5){
+			if(vertex == 1){ return barTop1; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barBottom; }
+		}
+	}
+	if([letter isEqualToString:@"t"]){
+		if(segment == 1){
+			if(vertex == 1){ return pos1; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 2 || segment == 3 || segment == 4){
+			if(vertex == 1){ return barNull; }
+			if(vertex == 2){ return barFull; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 5){
+			if(vertex == 1){ return pos1; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+	}
+	if([letter isEqualToString:@"v"]){
+		if(segment == 1){
+			if(vertex == 1){ return barTop; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 2){
+			if(vertex == 1){ return barNull; }
+			if(vertex == 2){ return barBottom1; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 3){
+			if(vertex == 1){ return barNull; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barBottom2; }
+		}
+		else if(segment == 4){
+			if(vertex == 1){ return barNull; }
+			if(vertex == 2){ return barBottom1; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 5){
+			if(vertex == 1){ return barTop; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+	}
+	if([letter isEqualToString:@"w"]){
+		if(segment == 1){
+			if(vertex == 1){ return barFull; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 2){
+			if(vertex == 1){ return barNull; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return pos3; }
+		}
+		else if(segment == 3){
+			if(vertex == 1){ return barNull; }
+			if(vertex == 2){ return barBottom; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 4){
+			if(vertex == 1){ return barNull; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return pos3; }
+		}
+		else if(segment == 5){
+			if(vertex == 1){ return barFull; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+	}
+	if([letter isEqualToString:@"x"]){
+		if(segment == 1){
+			if(vertex == 1){ return barTop1; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barBottom2; }
+		}
+		else if(segment == 2){
+			if(vertex == 1){ return barTop2; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barBottom1; }
+		}
+		else if(segment == 3){
+			if(vertex == 1){ return barNull; }
+			if(vertex == 2){ return pos2; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 4){
+			if(vertex == 1){ return barTop2; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barBottom1; }
+		}
+		else if(segment == 5){
+			if(vertex == 1){ return barTop1; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barBottom2; }
+		}
+	}
+	if([letter isEqualToString:@"y"]){
+		if(segment == 1){
+			if(vertex == 1){ return barTop1; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 2){
+			if(vertex == 1){ return barTop2; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 3){
+			if(vertex == 1){ return barNull; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barBottom; }
+		}
+		else if(segment == 4){
+			if(vertex == 1){ return barTop2; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+		else if(segment == 5){
+			if(vertex == 1){ return barTop1; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+	}
+	if([letter isEqualToString:@"z"]){
+		if(segment == 1){
+			if(vertex == 1){ return barNull; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barBottom; }
+		}
+		else if(segment == 2 || segment == 3 || segment == 4){
+			if(vertex == 1){ return pos1; }
+			if(vertex == 2){ return pos2; }
+			if(vertex == 3){ return pos3; }
+		}
+		else if(segment == 5){
+			if(vertex == 1){ return barTop; }
+			if(vertex == 2){ return barNull; }
+			if(vertex == 3){ return barNull; }
+		}
+	}
+	if([letter isEqualToString:@" "]){
+		return barNull;
+	}
+	if([letter isEqualToString:@"-"]){
+		if(vertex == 1){ return pos1; }
+		if(vertex == 2){ return pos2; }
+		if(vertex == 3){ return pos3; }
+	}
+	
 	return barNull;
 	
 }
