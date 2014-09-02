@@ -488,7 +488,7 @@
 			if(vertex == 2){ return barNull; }
 			if(vertex == 3){ return barNull; }
 		}
-		else if(segment == 2 || segment == 3 || segment == 4){
+		else if(segment == 3){
 			if(vertex == 1){ return barNull; }
 			if(vertex == 2){ return barFull; }
 			if(vertex == 3){ return barNull; }
@@ -497,6 +497,9 @@
 			if(vertex == 1){ return pos1; }
 			if(vertex == 2){ return barNull; }
 			if(vertex == 3){ return barNull; }
+		}
+		else{
+			return barNull;
 		}
 	}
 	if([letter isEqualToString:@"v"]){
