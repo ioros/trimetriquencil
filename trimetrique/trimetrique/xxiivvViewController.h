@@ -24,6 +24,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *toggleLineSpeed;
 @property (strong, nonatomic) IBOutlet UIButton *toggleLineColor;
 
+@property (strong, nonatomic) IBOutlet UIView *guideWidthLeft;
+@property (strong, nonatomic) IBOutlet UIView *guideWidthRight;
+
 - (IBAction)toggleInterface:(id)sender;
 - (IBAction)toggleLineWidth:(id)sender;
 - (IBAction)toggleLineStyle:(id)sender;
@@ -32,12 +35,13 @@
 
 @end
 
-
 float tileSize;
 float screenWidth;
 float screenHeight;
 
+float letterSpeed;
 float letterWidth;
+float letterRounded;
 
 int currentIndex;
 int currentSegment;

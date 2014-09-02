@@ -22,23 +22,33 @@
 
 -(void)start
 {
-	letterWidth = 0.5;
 	
-	[self templateStart];
-//	[self renderText:@"- leave something witchy"];
-}
-
--(void)templateStart
-{
 	tileSize = self.view.frame.size.width/8;
 	screenWidth = self.view.frame.size.width;
 	screenHeight = self.view.frame.size.height;
 	
-	self.brushWrapper.frame = CGRectMake( (screenWidth/2)-(tileSize/2), tileSize, tileSize, screenHeight-(2*tileSize));
+	letterSpeed = 0.5;
+	letterWidth = tileSize/2;
+	letterRounded = 1;
 	
-	_brushVertex1.layer.cornerRadius = tileSize/2;
-	_brushVertex2.layer.cornerRadius = tileSize/2;
-	_brushVertex3.layer.cornerRadius = tileSize/2;
+	[self templateStart];
+}
+
+-(void)templateStart
+{
+	
+	self.brushWrapper.frame = CGRectMake( (screenWidth/2)-(letterWidth/2), tileSize, letterWidth, screenHeight-(2*tileSize));
+	
+	if( letterRounded == 1 ){
+		_brushVertex1.layer.cornerRadius = letterWidth/2;
+		_brushVertex2.layer.cornerRadius = letterWidth/2;
+		_brushVertex3.layer.cornerRadius = letterWidth/2;
+	}
+	else{
+		_brushVertex1.layer.cornerRadius = 0;
+		_brushVertex2.layer.cornerRadius = 0;
+		_brushVertex3.layer.cornerRadius = 0;
+	}
 	
 	_toggleInterface.frame = CGRectMake(0, tileSize, screenWidth, screenHeight-tileSize);
 	
@@ -54,6 +64,12 @@
 	_toggleLineColor.backgroundColor = [UIColor yellowColor];
 	_toggleLineColor.frame = CGRectMake(tileSize*6, 0, tileSize, tileSize);
 	
+	_guideWidthLeft.frame = CGRectMake( (screenWidth/2)+(letterWidth/2), 0, 1, screenHeight);
+	_guideWidthRight.frame = CGRectMake( (screenWidth/2)-(letterWidth/2)-1, 0, 1, screenHeight);
+	
+	_guideWidthLeft.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tile.png"]];
+	_guideWidthRight.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tile.png"]];
+	
 	_textInput.frame = CGRectMake(tileSize+(tileSize/2), 0, (tileSize*2), tileSize);
 	[_textInput setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
 }
@@ -62,7 +78,7 @@
 {
 	[textPrint invalidate];
 	if(![text isEqualToString:@""] ){
-		textPrint = [NSTimer scheduledTimerWithTimeInterval: letterWidth target: self selector:@selector(renderTextTrigger:) userInfo: text repeats:YES];
+		textPrint = [NSTimer scheduledTimerWithTimeInterval: letterSpeed target: self selector:@selector(renderTextTrigger:) userInfo: text repeats:YES];
 	}
 }
 
@@ -75,12 +91,12 @@
 
 -(void)renderLetter:(NSString *)letter
 {
-	[NSTimer scheduledTimerWithTimeInterval: (letterWidth/6)*1 target: self selector:@selector(letterSegment:) userInfo: letter repeats:NO];
-	[NSTimer scheduledTimerWithTimeInterval: (letterWidth/6)*2 target: self selector:@selector(letterSegment:) userInfo: letter repeats:NO];
-	[NSTimer scheduledTimerWithTimeInterval: (letterWidth/6)*3 target: self selector:@selector(letterSegment:) userInfo: letter repeats:NO];
-	[NSTimer scheduledTimerWithTimeInterval: (letterWidth/6)*4 target: self selector:@selector(letterSegment:) userInfo: letter repeats:NO];
-	[NSTimer scheduledTimerWithTimeInterval: (letterWidth/6)*5 target: self selector:@selector(letterSegment:) userInfo: letter repeats:NO];
-	[NSTimer scheduledTimerWithTimeInterval: (letterWidth/6)*6 target: self selector:@selector(letterSpace) userInfo: nil repeats:NO];
+	[NSTimer scheduledTimerWithTimeInterval: (letterSpeed/6)*1 target: self selector:@selector(letterSegment:) userInfo: letter repeats:NO];
+	[NSTimer scheduledTimerWithTimeInterval: (letterSpeed/6)*2 target: self selector:@selector(letterSegment:) userInfo: letter repeats:NO];
+	[NSTimer scheduledTimerWithTimeInterval: (letterSpeed/6)*3 target: self selector:@selector(letterSegment:) userInfo: letter repeats:NO];
+	[NSTimer scheduledTimerWithTimeInterval: (letterSpeed/6)*4 target: self selector:@selector(letterSegment:) userInfo: letter repeats:NO];
+	[NSTimer scheduledTimerWithTimeInterval: (letterSpeed/6)*5 target: self selector:@selector(letterSegment:) userInfo: letter repeats:NO];
+	[NSTimer scheduledTimerWithTimeInterval: (letterSpeed/6)*6 target: self selector:@selector(letterSpace) userInfo: nil repeats:NO];
 }
 
 -(void)letterSpace
@@ -101,8 +117,6 @@
 		currentSegment = 1;
 		currentIndex += 1;
 	}
-	
-	NSLog(@"Letter: %@ segment: %d", letter, currentSegment);
 	
 	if( [letter isEqualToString:@"-"] ){
 		_brushVertex1.backgroundColor = [UIColor redColor];
@@ -125,22 +139,20 @@
 
 -(CGRect)renderLetterShape :(NSString*)letter :(int)segment :(int)vertex
 {
-	NSLog(@"%@ %d",letter,segment);
-	CGRect pos1 = CGRectMake(0, 0, tileSize, tileSize);
-	CGRect pos2 = CGRectMake(0, (_brushWrapper.frame.size.height/2)-(tileSize/2), tileSize, tileSize);
-	CGRect pos3 = CGRectMake(0, (_brushWrapper.frame.size.height)-(tileSize), tileSize, tileSize);
+	CGRect pos1 = CGRectMake(0, 0, letterWidth, letterWidth);
+	CGRect pos2 = CGRectMake(0, (_brushWrapper.frame.size.height/2)-(letterWidth/2), letterWidth, letterWidth);
+	CGRect pos3 = CGRectMake(0, (_brushWrapper.frame.size.height)-(letterWidth), letterWidth, letterWidth);
 	
 	CGRect barNull = CGRectMake(0, 0, 0, 0);
-	CGRect barFull = CGRectMake(0, 0, tileSize, _brushWrapper.frame.size.height);
-	CGRect barTop = CGRectMake(0, 0, tileSize,(_brushWrapper.frame.size.height/2)-(tileSize/2) );
+	CGRect barFull = CGRectMake(0, 0, letterWidth, _brushWrapper.frame.size.height);
+	CGRect barTop = CGRectMake(0, 0, letterWidth,(_brushWrapper.frame.size.height/2)-(letterWidth/2) );
 	
-	CGRect barTop1 = CGRectMake(0, 0, tileSize,(_brushWrapper.frame.size.height/4)-(tileSize/2) );
-	CGRect barTop2 = CGRectMake(0, (_brushWrapper.frame.size.height/4)-(tileSize/2), tileSize,(_brushWrapper.frame.size.height/4)-(tileSize/2) );
+	CGRect barTop1 = CGRectMake(0, 0, letterWidth,(_brushWrapper.frame.size.height/4)-(letterWidth/2) );
+	CGRect barTop2 = CGRectMake(0, (_brushWrapper.frame.size.height/4)-(letterWidth/2), letterWidth,(_brushWrapper.frame.size.height/4)-(letterWidth/2) );
 	
-	
-	CGRect barBottom = CGRectMake(0, (_brushWrapper.frame.size.height/2)-(tileSize/2), tileSize,(_brushWrapper.frame.size.height/2)-(tileSize/2) );
-	CGRect barBottom1 = CGRectMake(0, (_brushWrapper.frame.size.height/2)-(tileSize/2), tileSize,(_brushWrapper.frame.size.height/4)-(tileSize/2) );
-	CGRect barBottom2 = CGRectMake(0, ((_brushWrapper.frame.size.height/4)*3)-(tileSize/2), tileSize,(_brushWrapper.frame.size.height/4)-(tileSize/2) );
+	CGRect barBottom = CGRectMake(0, (_brushWrapper.frame.size.height/2)-(letterWidth/2), letterWidth,(_brushWrapper.frame.size.height/2)-(letterWidth/2) );
+	CGRect barBottom1 = CGRectMake(0, (_brushWrapper.frame.size.height/2)-(letterWidth/2), letterWidth,(_brushWrapper.frame.size.height/4)-(letterWidth/2) );
+	CGRect barBottom2 = CGRectMake(0, ((_brushWrapper.frame.size.height/4)*3)-(letterWidth/2), letterWidth,(_brushWrapper.frame.size.height/4)-(letterWidth/2) );
 	
 	
 	if([letter isEqualToString:@"a"]){
@@ -690,7 +702,8 @@
 
 
 - (IBAction)toggleInterface:(id)sender
-{	
+{
+	[_textInput	resignFirstResponder];
 	if( _interfaceWrapper.hidden == YES ){
 		_interfaceWrapper.hidden = NO;
 	}
@@ -702,7 +715,17 @@
 - (IBAction)toggleLineWidth:(id)sender {
 }
 
-- (IBAction)toggleLineStyle:(id)sender {
+- (IBAction)toggleLineStyle:(id)sender
+{
+	if( letterRounded == 1 ){
+		NSLog(@"LINE | Square");
+		letterRounded = 0;
+	}
+	else{
+		NSLog(@"LINE | Rounded");
+		letterRounded = 1;
+	}
+	[self templateStart];
 }
 
 - (IBAction)toggleLineSpeed:(id)sender {

@@ -37,6 +37,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
+                                    <view appearanceType="aqua" contentMode="scaleToFill" id="HE5-rx-Wgh" userLabel="guideWidthLeft">
+                                        <rect key="frame" x="80" y="142" width="160" height="284"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.40999651008595783" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view appearanceType="aqua" contentMode="scaleToFill" id="OJg-fa-nKa" userLabel="guideWidthRight">
+                                        <rect key="frame" x="80" y="142" width="160" height="284"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.40999651008595783" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
                                     <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BcN-O2-HA8" userLabel="toggleLineWidth">
                                         <rect key="frame" x="0.0" y="139" width="320" height="291"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -52,7 +62,7 @@
                                         <rect key="frame" x="0.0" y="139" width="320" height="291"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal">
+                                        <state key="normal" title="Sty">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -115,6 +125,8 @@
                         <outlet property="brushVertex2" destination="ei8-8J-8Vo" id="a7t-vJ-s0Z"/>
                         <outlet property="brushVertex3" destination="S5o-3c-CX2" id="svC-Xz-611"/>
                         <outlet property="brushWrapper" destination="fPJ-L8-cwi" id="R1V-qx-r3F"/>
+                        <outlet property="guideWidthLeft" destination="HE5-rx-Wgh" id="Mj2-2S-8ZA"/>
+                        <outlet property="guideWidthRight" destination="OJg-fa-nKa" id="SUg-zn-Fc8"/>
                         <outlet property="interfaceWrapper" destination="6D8-dq-npH" id="Jt8-V0-gp2"/>
                         <outlet property="textInput" destination="0Uu-mG-vF4" id="256-Hg-T5Y"/>
                         <outlet property="toggleInterface" destination="wmp-nM-rmW" id="SH4-qh-zB5"/>

@@ -21,6 +21,7 @@
 		037B184219B4C57200949BA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037B182419B4C57200949BA5 /* UIKit.framework */; };
 		037B184A19B4C57200949BA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 037B184819B4C57200949BA5 /* InfoPlist.strings */; };
 		037B184C19B4C57200949BA5 /* trimetriqueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 037B184B19B4C57200949BA5 /* trimetriqueTests.m */; };
+		03F79DD619B64BB800F54D55 /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 03F79DD519B64BB800F54D55 /* tile.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		037B184719B4C57200949BA5 /* trimetriqueTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "trimetriqueTests-Info.plist"; sourceTree = "<group>"; };
 		037B184919B4C57200949BA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		037B184B19B4C57200949BA5 /* trimetriqueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = trimetriqueTests.m; sourceTree = "<group>"; };
+		03F79DD519B64BB800F54D55 /* tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile.png; path = en.assets/tile.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		037B182619B4C57200949BA5 /* trimetrique */ = {
 			isa = PBXGroup;
 			children = (
+				03F79DD519B64BB800F54D55 /* tile.png */,
 				037B182F19B4C57200949BA5 /* xxiivvAppDelegate.h */,
 				037B183019B4C57200949BA5 /* xxiivvAppDelegate.m */,
 				037B183219B4C57200949BA5 /* Main.storyboard */,
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				037B183919B4C57200949BA5 /* Images.xcassets in Resources */,
+				03F79DD619B64BB800F54D55 /* tile.png in Resources */,
 				037B182B19B4C57200949BA5 /* InfoPlist.strings in Resources */,
 				037B183419B4C57200949BA5 /* Main.storyboard in Resources */,
 			);
