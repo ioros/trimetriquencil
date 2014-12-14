@@ -53,55 +53,88 @@
 	
 	_toggleInterface.frame = CGRectMake(0, tileSize, screenWidth, screenHeight-tileSize);
 	
-	_toggleLineSpeed.frame = CGRectMake(tileSize*0, 0, tileSize, tileSize);
-	
-	_toggleLineStyle.frame = CGRectMake(tileSize*5, 0, tileSize, tileSize);
-	
-	_toggleLineWidth.frame = CGRectMake(tileSize*6, 0, tileSize, tileSize);
-	
-	_toggleLineColor.frame = CGRectMake(tileSize*7, 0, tileSize, tileSize);
-	
 	_guideWidthLeft.frame = CGRectMake( (screenWidth/2)+(letterWidth/2), 0, 1, screenHeight);
 	_guideWidthRight.frame = CGRectMake( (screenWidth/2)-(letterWidth/2)-1, 0, 1, screenHeight);
 	
 	_guideWidthLeft.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tile.png"]];
 	_guideWidthRight.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tile.png"]];
 	
-	_textInput.frame = CGRectMake(tileSize+(tileSize/2), 0, (tileSize*2), tileSize);
-	[_textInput setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
-	
-	// Preview
+	// Color
 	
 	UIColor * colorTarget = [UIColor whiteColor];
 	if( letterColor == 2 ){ colorTarget = [UIColor colorWithRed:0 green:1 blue:0.75 alpha:1]; }
 	if( letterColor == 1 ){ colorTarget = [UIColor colorWithRed:1 green:0 blue:0 alpha:1]; }
 	if( letterColor == 0 ){ colorTarget = [UIColor redColor]; }
 	
-	_previewLineColor.backgroundColor = colorTarget;
-	_previewLineColor.frame = CGRectMake(screenWidth-tileSize/4*3, tileSize/2/2, tileSize/2, tileSize/2);
+	_optionLineColor.frame = CGRectMake(0, screenHeight-(2*tileSize), screenWidth/2, tileSize);
+	_textLineColor.frame = CGRectMake(tileSize, 0, screenWidth/2, tileSize);
 	
-	_previewLineStyle.backgroundColor = [UIColor grayColor];
-	_previewLineStyle.frame = CGRectMake(screenWidth-(tileSize/4*3)-(tileSize*2), tileSize/2/2, tileSize/2, tileSize/2);
+	_toggleLineColor.frame = CGRectMake(0, 0, screenWidth/2, tileSize);
+
+	_previewLineColor.backgroundColor = colorTarget;
+	_previewLineColor.frame = CGRectMake((tileSize/2)-7, (tileSize/2)-7, tileSize/3, tileSize/3);
+	
+	// Style
 	
 	if(letterRounded == 1){
-		_previewLineStyle.layer.cornerRadius = tileSize/2/2;
+		_previewLineStyle.layer.cornerRadius = tileSize/3/2;
 	}
 	else{
 		_previewLineStyle.layer.cornerRadius = 0;
 	}
 	
+	_previewLineStyle.backgroundColor = [UIColor grayColor];
 	
-	_previewLineWidth.backgroundColor = [UIColor grayColor];
+	_optionLineStyle.frame = CGRectMake(0, screenHeight-(3*tileSize), screenWidth/2, tileSize);
+	_textLineStyle.frame = CGRectMake(tileSize, 0, screenWidth/2, tileSize);
+	
+	_toggleLineStyle.frame = CGRectMake(0, 0, screenWidth/2, tileSize);
+	
+	_previewLineStyle.backgroundColor = [UIColor whiteColor];
+	_previewLineStyle.frame = CGRectMake((tileSize/2)-7, (tileSize/2)-7, tileSize/3, tileSize/3);
+	
+	// Width
 	
 	if(letterWidth == tileSize/2){
-		_previewLineWidth.frame = CGRectMake(screenWidth-(tileSize/4*3)-(tileSize*1), tileSize/2/2, tileSize/2, tileSize/2);
+		_previewLineWidth.frame = CGRectMake((tileSize/2)-7, (tileSize/2)-7, tileSize/3, tileSize/3);
 	}
 	else{
-		_previewLineWidth.frame = CGRectMake(screenWidth-(tileSize/4*3)-(tileSize*1), tileSize/2/2, tileSize/2/2, tileSize/2);
+		_previewLineWidth.frame =CGRectMake((tileSize/2)-7, (tileSize/2)-7, tileSize/6, tileSize/3);
 	}
 	
+	_optionLineWidth.frame = CGRectMake(0, screenHeight-(4*tileSize), screenWidth/2, tileSize);
+	_textLineWidth.frame = CGRectMake(tileSize, 0, screenWidth/2, tileSize);
 	
+	_toggleLineWidth.frame = CGRectMake(0, 0, screenWidth/2, tileSize);
 	
+	_previewLineWidth.backgroundColor = [UIColor whiteColor];
+	_previewLineWidth.layer.cornerRadius = 3;
+	
+	// Speed
+	
+	_previewLineSpeed.backgroundColor = [UIColor redColor];
+	
+	if( letterSpeed == 1 ){
+		_previewLineSpeed.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"speed_fast.png"]];
+	}
+	else{
+		_previewLineSpeed.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"speed_slow.png"]];
+	}
+	
+	_optionLineSpeed.frame = CGRectMake(0, screenHeight-(5*tileSize), screenWidth/2, tileSize);
+	_textLineSpeed.frame = CGRectMake(tileSize, 0, screenWidth/2, tileSize);
+	
+	_toggleLineSpeed.frame = CGRectMake(0, 0, screenWidth/2, tileSize);
+	
+	_previewLineSpeed.frame = CGRectMake((tileSize/2)-7, (tileSize/2)-7, tileSize/3, tileSize/3);
+	
+	// text
+	
+	_optionText.frame = CGRectMake(0, screenHeight-(1*tileSize), screenWidth, tileSize);
+	_previewtext.frame = CGRectMake((tileSize/2)-7, (tileSize/2)-7, tileSize/3, tileSize/3);
+	
+	_textInput.frame = CGRectMake(tileSize, 0, screenWidth-(2*tileSize), tileSize);
+	[_textInput setValue:[UIColor blackColor] forKeyPath:@"_placeholderLabel.textColor"];
 	
 }
 

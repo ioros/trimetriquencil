@@ -31,6 +31,21 @@
 @property (strong, nonatomic) IBOutlet UIView *previewLineStyle;
 @property (strong, nonatomic) IBOutlet UIView *previewLineWidth;
 
+@property (strong, nonatomic) IBOutlet UILabel *textLineColor;
+@property (strong, nonatomic) IBOutlet UIView *optionLineColor;
+@property (strong, nonatomic) IBOutlet UIView *optionLineStyle;
+
+@property (strong, nonatomic) IBOutlet UILabel *textLineStyle;
+@property (strong, nonatomic) IBOutlet UIView *optionLineWidth;
+@property (strong, nonatomic) IBOutlet UILabel *textLineWidth;
+@property (strong, nonatomic) IBOutlet UIView *optionLineSpeed;
+@property (strong, nonatomic) IBOutlet UILabel *textLineSpeed;
+@property (strong, nonatomic) IBOutlet UIView *previewLineSpeed;
+
+@property (strong, nonatomic) IBOutlet UIView *optionText;
+@property (strong, nonatomic) IBOutlet UILabel *previewtext;
+
+
 - (IBAction)toggleInterface:(id)sender;
 - (IBAction)toggleLineWidth:(id)sender;
 - (IBAction)toggleLineStyle:(id)sender;

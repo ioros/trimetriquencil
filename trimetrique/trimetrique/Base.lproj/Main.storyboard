@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A329r" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Xxiivv View Controller-->
@@ -12,116 +13,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view appearanceType="aqua" contentMode="scaleToFill" id="fPJ-L8-cwi" userLabel="brushWrapper">
+                            <view contentMode="scaleToFill" id="fPJ-L8-cwi" userLabel="brushWrapper">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <view appearanceType="aqua" contentMode="scaleToFill" id="X0F-g7-eoE" userLabel="brushVertex1">
+                                    <view contentMode="scaleToFill" id="X0F-g7-eoE" userLabel="brushVertex1">
                                         <rect key="frame" x="110" y="234" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view appearanceType="aqua" contentMode="scaleToFill" id="ei8-8J-8Vo" userLabel="brushVertex2">
+                                    <view contentMode="scaleToFill" id="ei8-8J-8Vo" userLabel="brushVertex2">
                                         <rect key="frame" x="110" y="234" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view appearanceType="aqua" contentMode="scaleToFill" id="S5o-3c-CX2" userLabel="brushVertex3">
+                                    <view contentMode="scaleToFill" id="S5o-3c-CX2" userLabel="brushVertex3">
                                         <rect key="frame" x="110" y="234" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" id="6D8-dq-npH" userLabel="interfaceWrapper">
+                            <view contentMode="scaleToFill" id="6D8-dq-npH" userLabel="interfaceWrapper">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <view appearanceType="aqua" contentMode="scaleToFill" id="HE5-rx-Wgh" userLabel="guideWidthLeft">
+                                    <view contentMode="scaleToFill" id="HE5-rx-Wgh" userLabel="guideWidthLeft">
                                         <rect key="frame" x="80" y="142" width="160" height="284"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.40999651008595783" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view appearanceType="aqua" contentMode="scaleToFill" id="OJg-fa-nKa" userLabel="guideWidthRight">
+                                    <view contentMode="scaleToFill" id="OJg-fa-nKa" userLabel="guideWidthRight">
                                         <rect key="frame" x="80" y="142" width="160" height="284"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.40999651008595783" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view appearanceType="aqua" contentMode="scaleToFill" id="OAI-sp-P1H" userLabel="previewLineWidth">
-                                        <rect key="frame" x="80" y="142" width="160" height="284"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    </view>
-                                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BcN-O2-HA8" userLabel="toggleLineWidth">
-                                        <rect key="frame" x="0.0" y="139" width="320" height="291"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="toggleLineWidth:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bEm-S8-1J9"/>
-                                        </connections>
-                                    </button>
-                                    <view appearanceType="aqua" contentMode="scaleToFill" id="47m-hL-eQK" userLabel="previewLineStyle">
-                                        <rect key="frame" x="80" y="142" width="160" height="284"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    </view>
-                                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bph-hU-0Pd" userLabel="toggleLineStyle">
-                                        <rect key="frame" x="0.0" y="139" width="320" height="291"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="toggleLineStyle:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VIR-xa-nai"/>
-                                        </connections>
-                                    </button>
-                                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Psp-Pr-0VH" userLabel="toggleLineSpeed">
-                                        <rect key="frame" x="0.0" y="139" width="320" height="291"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="Spd">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="toggleLineSpeed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ynq-bJ-4bf"/>
-                                        </connections>
-                                    </button>
-                                    <view appearanceType="aqua" contentMode="scaleToFill" id="IHc-p8-hev" userLabel="previewLineColor">
-                                        <rect key="frame" x="80" y="142" width="160" height="284"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    </view>
-                                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O5i-da-90M" userLabel="toggleLineColor">
-                                        <rect key="frame" x="0.0" y="139" width="320" height="291"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="toggleLineColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aDk-B7-1JQ"/>
-                                        </connections>
-                                    </button>
-                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text" minimumFontSize="12" id="0Uu-mG-vF4" userLabel="textInput">
-                                        <rect key="frame" x="112" y="30" width="97" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="vXZ-lx-hvc" id="BAd-cL-TQk"/>
-                                        </connections>
-                                    </textField>
                                 </subviews>
                             </view>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wmp-nM-rmW" userLabel="toggleInterface">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wmp-nM-rmW" userLabel="toggleInterface">
                                 <rect key="frame" x="0.0" y="139" width="320" height="291"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -129,6 +61,146 @@
                                     <action selector="toggleInterface:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JPT-NU-N5r"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" id="isg-vS-RuN" userLabel="optionLineWidth">
+                                <rect key="frame" x="80" y="142" width="160" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="OAI-sp-P1H" userLabel="previewLineWidth">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="284"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIDTH" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZCW-tW-aPC" userLabel="textLineWidth">
+                                        <rect key="frame" x="59" y="132" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BcN-O2-HA8" userLabel="toggleLineWidth">
+                                        <rect key="frame" x="-80" y="-3" width="320" height="291"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleLineWidth:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bEm-S8-1J9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" id="Poz-x1-KgB" userLabel="optionLineSpeed">
+                                <rect key="frame" x="80" y="142" width="160" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="KUX-hL-cRo" userLabel="previewLineSpeed">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="284"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPEED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Vw-iB-oNY" userLabel="textLineSpeed">
+                                        <rect key="frame" x="59" y="132" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Psp-Pr-0VH" userLabel="toggleLineSpeed">
+                                        <rect key="frame" x="-80" y="-3" width="320" height="291"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleLineSpeed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ynq-bJ-4bf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" id="Spn-Hv-sNm" userLabel="optionLineStyle">
+                                <rect key="frame" x="80" y="142" width="160" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="47m-hL-eQK" userLabel="previewLineStyle">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="284"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STYLE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uvw-YP-Ki7" userLabel="textLineStyle">
+                                        <rect key="frame" x="59" y="132" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bph-hU-0Pd" userLabel="toggleLineStyle">
+                                        <rect key="frame" x="-80" y="-3" width="320" height="291"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleLineStyle:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VIR-xa-nai"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" id="ydN-gl-p6H" userLabel="optionLineColor">
+                                <rect key="frame" x="80" y="142" width="160" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="IHc-p8-hev" userLabel="previewLineColor">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="284"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COLOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Hf-Ia-Ira" userLabel="textLineColor">
+                                        <rect key="frame" x="59" y="132" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O5i-da-90M" userLabel="toggleLineColor">
+                                        <rect key="frame" x="-80" y="-3" width="320" height="291"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleLineColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aDk-B7-1JQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" id="G6D-6Y-XSb" userLabel="optionText">
+                                <rect key="frame" x="80" y="142" width="160" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ck8-dg-BjH" userLabel="previewtext">
+                                        <rect key="frame" x="59" y="132" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text" minimumFontSize="12" id="0Uu-mG-vF4" userLabel="textInput">
+                                        <rect key="frame" x="31" y="127" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="vXZ-lx-hvc" id="BAd-cL-TQk"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -140,10 +212,21 @@
                         <outlet property="guideWidthLeft" destination="HE5-rx-Wgh" id="Mj2-2S-8ZA"/>
                         <outlet property="guideWidthRight" destination="OJg-fa-nKa" id="SUg-zn-Fc8"/>
                         <outlet property="interfaceWrapper" destination="6D8-dq-npH" id="Jt8-V0-gp2"/>
+                        <outlet property="optionLineColor" destination="ydN-gl-p6H" id="EdH-gT-afp"/>
+                        <outlet property="optionLineSpeed" destination="Poz-x1-KgB" id="68H-4H-c9g"/>
+                        <outlet property="optionLineStyle" destination="Spn-Hv-sNm" id="cEQ-Np-Hh8"/>
+                        <outlet property="optionLineWidth" destination="isg-vS-RuN" id="HH1-Nh-wcT"/>
+                        <outlet property="optionText" destination="G6D-6Y-XSb" id="AEp-an-a9g"/>
                         <outlet property="previewLineColor" destination="IHc-p8-hev" id="88Q-tr-puU"/>
+                        <outlet property="previewLineSpeed" destination="KUX-hL-cRo" id="4JW-ig-Cgl"/>
                         <outlet property="previewLineStyle" destination="47m-hL-eQK" id="ppU-Oy-jfs"/>
                         <outlet property="previewLineWidth" destination="OAI-sp-P1H" id="6Lo-K4-QGi"/>
+                        <outlet property="previewtext" destination="Ck8-dg-BjH" id="h81-kE-1c2"/>
                         <outlet property="textInput" destination="0Uu-mG-vF4" id="256-Hg-T5Y"/>
+                        <outlet property="textLineColor" destination="6Hf-Ia-Ira" id="Hwe-NM-PQq"/>
+                        <outlet property="textLineSpeed" destination="1Vw-iB-oNY" id="mWK-ed-laj"/>
+                        <outlet property="textLineStyle" destination="Uvw-YP-Ki7" id="hjQ-gi-Agm"/>
+                        <outlet property="textLineWidth" destination="ZCW-tW-aPC" id="l6m-vZ-7fr"/>
                         <outlet property="toggleInterface" destination="wmp-nM-rmW" id="SH4-qh-zB5"/>
                         <outlet property="toggleLineColor" destination="O5i-da-90M" id="JEt-ip-DaA"/>
                         <outlet property="toggleLineSpeed" destination="Psp-Pr-0VH" id="YLO-jq-Shd"/>

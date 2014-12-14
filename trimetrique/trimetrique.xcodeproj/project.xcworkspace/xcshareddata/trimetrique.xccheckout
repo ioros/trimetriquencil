@@ -10,29 +10,29 @@
 	<string>trimetrique</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>033886AE-5CCC-4C8D-AADE-4655D1F56DE3</key>
+		<key>486C62ACC8B8F5AB8C6B5DC0FF0973D94AF25693</key>
 		<string>https://github.com/aliceffekt/trimetriquencil.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>trimetrique/trimetrique.xcodeproj/project.xcworkspace</string>
+	<string>trimetrique/trimetrique.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>033886AE-5CCC-4C8D-AADE-4655D1F56DE3</key>
+		<key>486C62ACC8B8F5AB8C6B5DC0FF0973D94AF25693</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/aliceffekt/trimetriquencil.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>033886AE-5CCC-4C8D-AADE-4655D1F56DE3</string>
+	<string>486C62ACC8B8F5AB8C6B5DC0FF0973D94AF25693</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>033886AE-5CCC-4C8D-AADE-4655D1F56DE3</string>
+			<string>486C62ACC8B8F5AB8C6B5DC0FF0973D94AF25693</string>
 			<key>IDESourceControlWCCName</key>
 			<string>trimetriquencil</string>
 		</dict>

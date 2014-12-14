@@ -21,6 +21,8 @@
 		037B184219B4C57200949BA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037B182419B4C57200949BA5 /* UIKit.framework */; };
 		037B184A19B4C57200949BA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 037B184819B4C57200949BA5 /* InfoPlist.strings */; };
 		037B184C19B4C57200949BA5 /* trimetriqueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 037B184B19B4C57200949BA5 /* trimetriqueTests.m */; };
+		03A8FBF91A3E24B300CE4715 /* speed_fast.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A8FBF71A3E24B300CE4715 /* speed_fast.png */; };
+		03A8FBFA1A3E24B300CE4715 /* speed_slow.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A8FBF81A3E24B300CE4715 /* speed_slow.png */; };
 		03F79DD619B64BB800F54D55 /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 03F79DD519B64BB800F54D55 /* tile.png */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,8 @@
 		037B184719B4C57200949BA5 /* trimetriqueTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "trimetriqueTests-Info.plist"; sourceTree = "<group>"; };
 		037B184919B4C57200949BA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		037B184B19B4C57200949BA5 /* trimetriqueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = trimetriqueTests.m; sourceTree = "<group>"; };
+		03A8FBF71A3E24B300CE4715 /* speed_fast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speed_fast.png; path = en.assets/speed_fast.png; sourceTree = "<group>"; };
+		03A8FBF81A3E24B300CE4715 /* speed_slow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speed_slow.png; path = en.assets/speed_slow.png; sourceTree = "<group>"; };
 		03F79DD519B64BB800F54D55 /* tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile.png; path = en.assets/tile.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +118,8 @@
 		037B182619B4C57200949BA5 /* trimetrique */ = {
 			isa = PBXGroup;
 			children = (
+				03A8FBF71A3E24B300CE4715 /* speed_fast.png */,
+				03A8FBF81A3E24B300CE4715 /* speed_slow.png */,
 				03F79DD519B64BB800F54D55 /* tile.png */,
 				037B182F19B4C57200949BA5 /* xxiivvAppDelegate.h */,
 				037B183019B4C57200949BA5 /* xxiivvAppDelegate.m */,
@@ -232,8 +238,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03A8FBFA1A3E24B300CE4715 /* speed_slow.png in Resources */,
 				037B183919B4C57200949BA5 /* Images.xcassets in Resources */,
 				03F79DD619B64BB800F54D55 /* tile.png in Resources */,
+				03A8FBF91A3E24B300CE4715 /* speed_fast.png in Resources */,
 				037B182B19B4C57200949BA5 /* InfoPlist.strings in Resources */,
 				037B183419B4C57200949BA5 /* Main.storyboard in Resources */,
 			);
