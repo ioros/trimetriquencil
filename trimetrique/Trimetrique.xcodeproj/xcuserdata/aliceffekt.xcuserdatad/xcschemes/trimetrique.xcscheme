@@ -17,7 +17,7 @@
                BlueprintIdentifier = "037B181C19B4C57200949BA5"
                BuildableName = "trimetrique.app"
                BlueprintName = "trimetrique"
-               ReferencedContainer = "container:trimetrique.xcodeproj">
+               ReferencedContainer = "container:Trimetrique.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "037B183D19B4C57200949BA5"
                BuildableName = "trimetriqueTests.xctest"
                BlueprintName = "trimetriqueTests"
-               ReferencedContainer = "container:trimetrique.xcodeproj">
+               ReferencedContainer = "container:Trimetrique.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "037B181C19B4C57200949BA5"
             BuildableName = "trimetrique.app"
             BlueprintName = "trimetrique"
-            ReferencedContainer = "container:trimetrique.xcodeproj">
+            ReferencedContainer = "container:Trimetrique.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "037B181C19B4C57200949BA5"
             BuildableName = "trimetrique.app"
             BlueprintName = "trimetrique"
-            ReferencedContainer = "container:trimetrique.xcodeproj">
+            ReferencedContainer = "container:Trimetrique.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -82,7 +82,7 @@
             BlueprintIdentifier = "037B181C19B4C57200949BA5"
             BuildableName = "trimetrique.app"
             BlueprintName = "trimetrique"
-            ReferencedContainer = "container:trimetrique.xcodeproj">
+            ReferencedContainer = "container:Trimetrique.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

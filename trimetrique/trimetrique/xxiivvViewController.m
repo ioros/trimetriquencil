@@ -139,6 +139,7 @@
 
 -(void)renderText :(NSString*)text
 {
+	text = [text lowercaseString];
 	[textPrint invalidate];
 	if(![text isEqualToString:@""] ){
 		textPrint = [NSTimer scheduledTimerWithTimeInterval: letterSpeed target: self selector:@selector(renderTextTrigger:) userInfo: text repeats:YES];

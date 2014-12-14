@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F3530FDD-B03F-4768-B7AA-16F3C668BEEA</string>
 	<key>IDESourceControlProjectName</key>
-	<string>trimetrique</string>
+	<string>Trimetrique</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>486C62ACC8B8F5AB8C6B5DC0FF0973D94AF25693</key>
 		<string>https://github.com/aliceffekt/trimetriquencil.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>trimetrique/trimetrique.xcodeproj</string>
+	<string>trimetrique/Trimetrique.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>486C62ACC8B8F5AB8C6B5DC0FF0973D94AF25693</key>
