@@ -37,7 +37,6 @@
 
 -(void)templateStart
 {
-	
 	self.brushWrapper.frame = CGRectMake( (screenWidth/2)-(letterWidth/2), tileSize, letterWidth, screenHeight-(2*tileSize));
 	
 	if( letterRounded == 1 ){
@@ -756,7 +755,7 @@
 -(BOOL) textFieldShouldReturn:(UITextField *)textField
 {
 	[self renderText:[textField text]];
-	
+	[self hideInterface];
     [textField resignFirstResponder];
     return YES;
 }
@@ -764,13 +763,34 @@
 
 - (IBAction)toggleInterface:(id)sender
 {
+	
 	[_textInput	resignFirstResponder];
 	if( _interfaceWrapper.hidden == YES ){
-		_interfaceWrapper.hidden = NO;
+		[self showInterface];
 	}
 	else{
-		_interfaceWrapper.hidden = YES;
+		[self hideInterface];		
 	}
+}
+
+-(void)showInterface
+{
+	_interfaceWrapper.hidden = NO;
+	_optionLineColor.hidden = NO;
+	_optionLineSpeed.hidden = NO;
+	_optionLineStyle.hidden = NO;
+	_optionLineWidth.hidden = NO;
+	_optionText.hidden = NO;
+}
+
+-(void)hideInterface
+{
+	_interfaceWrapper.hidden = YES;
+	_optionLineColor.hidden = YES;
+	_optionLineSpeed.hidden = YES;
+	_optionLineStyle.hidden = YES;
+	_optionLineWidth.hidden = YES;
+	_optionText.hidden = YES;
 }
 
 - (IBAction)toggleLineWidth:(id)sender
